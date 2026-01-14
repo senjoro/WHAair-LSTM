@@ -1,10 +1,10 @@
-# LSTM Time Series Forecasting Model
+# WHAair-LSTM framework
 
 This project implements an LSTM (Long Short-Term Memory) neural network for time series forecasting using environmental data. The model is built in R with the Keras/TensorFlow framework.
 
 ## 📋 Project Overview
 
-The model uses historical environmental variables (relative humidity, temperature, and a custom `wha2` variable) to predict future values. The architecture includes lagged features to capture temporal dependencies in the data.
+The model uses historical environmental variables (relative humidity, temperature, and a custom `WHAair` variable) to predict future values. The architecture includes lagged features to capture temporal dependencies in the data.
 
 ## 🏗️ Model Architecture
 
@@ -43,3 +43,6 @@ The preprocessing pipeline includes:
 # Required R packages
 install.packages(c("dplyr", "keras", "ggplot2", "ggpointdensity", 
                    "tidyr", "patchwork", "tensorflow"))
+#Loading dataset
+read.table("lag_var_dataset.txt")
+#Train the model using WHAairLSTM.R
