@@ -32,7 +32,7 @@ y_vec <- as.numeric(trantianjing$huxi)
 # 4. 考虑到多站点，采样建议 (可以使用随机拆分，因为 lag 已在分组内完成)
 # 1. 确定切分时间点（例如将最后 20% 的日期作为测试集）
 all_dates <- sort(unique(trantianjing$DATE))
-split_point <- all_dates[floor(length(all_dates) * 0.9)]
+split_point <- all_dates[floor(length(all_dates) * 0.8)]
 
 # 2. 按日期物理隔绝训练集与测试集
 train_data <- trantianjing %>% filter(DATE <= split_point)
